@@ -1,0 +1,45 @@
+{
+	"itemGroup.tooltab": "LizYami's Large Tools",
+
+	"item.largetools.wooden_paxel": "Wooden Paxel", 
+	"item.largetools.wooden_hammer": "Wooden Hammer",
+	"item.largetools.wooden_saw": "Wooden Saw",
+	"item.largetools.wooden_backhoe": "Wooden Backhoe",
+	"item.largetools.wooden_tiller": "Wooden Tiller",
+	"item.largetools.wooden_backhaw": "Wooden Backhaw",
+	
+	"item.largetools.stone_paxel": "Stone Paxel", 
+	"item.largetools.stone_hammer": "Stone Hammer",
+	"item.largetools.stone_saw": "Stone Saw",
+	"item.largetools.stone_backhoe": "Stone Backhoe",
+	"item.largetools.stone_tiller": "Stone Tiller",
+	"item.largetools.stone_backhaw": "Stone Backhaw",
+
+	"item.largetools.iron_paxel": "Iron Paxel", 
+	"item.largetools.iron_hammer": "Iron Hammer",
+	"item.largetools.iron_saw": "Iron Saw",
+	"item.largetools.iron_backhoe": "Iron Backhoe",
+	"item.largetools.iron_tiller": "Iron Tiller",
+	"item.largetools.iron_backhaw": "Iron Backhaw",
+
+	"item.largetools.golden_paxel": "Golden Paxel", 
+	"item.largetools.golden_hammer": "Golden Hammer",
+	"item.largetools.golden_saw": "Golden Saw",
+	"item.largetools.golden_backhoe": "Golden Backhoe",
+	"item.largetools.golden_tiller": "Golden Tiller",
+	"item.largetools.golden_backhaw": "Golden Backhaw",
+
+	"item.largetools.diamond_paxel": "Diamond Paxel", 
+	"item.largetools.diamond_hammer": "Diamond Hammer",
+	"item.largetools.diamond_saw": "Diamond Saw",
+	"item.largetools.diamond_backhoe": "Diamond Backhoe",
+	"item.largetools.diamond_tiller": "Diamond Tiller",
+	"item.largetools.diamond_backhaw": "Diamond Backhaw",
+
+	"item.largetools.netherite_paxel": "Netherite Paxel", 
+	"item.largetools.netherite_hammer": "Netherite Hammer",
+	"item.largetools.netherite_saw": "Netherite Saw",
+	"item.largetools.netherite_backhoe": "Netherite Backhoe",
+	"item.largetools.netherite_tiller": "Netherite Tiller",
+	"item.largetools.netherite_backhaw": "Netherite Backhaw"
+}

@@ -1,0 +1,22 @@
+modLoader="javafml"
+loaderVersion="[36,)"
+license="Academic Free License v3.0"
+
+[[mods]]
+modId="largetools"
+version="1.0.0"
+displayName="LizYami's Large Tools"
+credits="Created by Elizabeth Yamamoto"
+displayURL="https://www.curseforge.com/minecraft/mc-mods/lizyamislargetools"
+authors="ElizaYami"
+
+[[dependencies.largetools]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.16.5]"
+    ordering="NONE"
+    side="BOTH"
+
+
+
+

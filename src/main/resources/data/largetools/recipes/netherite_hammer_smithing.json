@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smithing",
+  "base": {
+    "item": "largetools:diamond_hammer"
+  },
+  "addition": {
+    "item": "minecraft:netherite_block"
+  },
+  "result": {
+    "item": "largetools:netherite_hammer"
+  }
+}
