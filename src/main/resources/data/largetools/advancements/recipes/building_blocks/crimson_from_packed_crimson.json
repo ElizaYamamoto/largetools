@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "largetools:crimson_from_packed_crimson"
+    ]
+  },
+  "criteria": {
+    "has_packed_crimson": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "largetools:packed_crimson"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "largetools:crimson_from_packed_crimson"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_packed_crimson",
+      "has_the_recipe"
+    ]
+  ]
+}

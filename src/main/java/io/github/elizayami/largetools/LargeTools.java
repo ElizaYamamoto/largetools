@@ -2,6 +2,7 @@ package io.github.elizayami.largetools;
 
 import org.apache.logging.log4j.Logger;
 
+import io.github.elizayami.largetools.common.BlockInit;
 import io.github.elizayami.largetools.common.ItemInit;
 import io.github.elizayami.largetools.common.enchantment.EnchantmentInit;
 
@@ -33,6 +34,7 @@ public class LargeTools
 		IEventBus forgeBus = MinecraftForge.EVENT_BUS;
 
 		ItemInit.ITEMS.register(bus);
+		BlockInit.BLOCKS.register(bus);
 		EnchantmentInit.ENCHANTMENTS.register(bus);
 
 		forgeBus.register(this);

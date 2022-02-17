@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "largetools:birch_from_packed_birch"
+    ]
+  },
+  "criteria": {
+    "has_packed_birch": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "largetools:packed_birch"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "largetools:birch_from_packed_birch"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_packed_birch",
+      "has_the_recipe"
+    ]
+  ]
+}

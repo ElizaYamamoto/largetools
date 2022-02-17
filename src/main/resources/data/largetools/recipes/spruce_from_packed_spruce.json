@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "spruce_ingot",
+  "ingredients": [
+    {
+      "item": "largetools:packed_spruce"
+    }
+  ],
+  "result": {
+    "item": "minecraft:spruce_log",
+    "count": 9
+  }
+}

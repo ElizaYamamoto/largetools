@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "acacia_ingot",
+  "ingredients": [
+    {
+      "item": "largetools:packed_acacia"
+    }
+  ],
+  "result": {
+    "item": "minecraft:acacia_log",
+    "count": 9
+  }
+}

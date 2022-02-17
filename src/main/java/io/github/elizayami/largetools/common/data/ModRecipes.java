@@ -3,19 +3,22 @@ package io.github.elizayami.largetools.common.data;
 import java.util.function.Consumer;
 
 import io.github.elizayami.largetools.LargeTools;
+import io.github.elizayami.largetools.common.BlockInit;
 import io.github.elizayami.largetools.common.ItemInit;
+import io.github.elizayami.largetools.common.TagInit;
 import io.github.elizayami.largetools.common.VanillaMaterial;
+import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.IFinishedRecipe;
 import net.minecraft.data.RecipeProvider;
 import net.minecraft.data.ShapedRecipeBuilder;
+import net.minecraft.data.ShapelessRecipeBuilder;
 import net.minecraft.data.SmithingRecipeBuilder;
 import net.minecraft.item.Item;
 import net.minecraft.item.Items;
 import net.minecraft.item.crafting.Ingredient;
 import net.minecraft.tags.ITag;
-import net.minecraft.tags.ItemTags;
 import net.minecraft.util.ResourceLocation;
 
 public class ModRecipes extends RecipeProvider
@@ -33,12 +36,23 @@ public class ModRecipes extends RecipeProvider
 	@Override
 	protected void registerRecipes(Consumer<IFinishedRecipe> consumer)
 	{
-		makeVanillaMaterialRecipes(ItemInit.WOOD, ItemTags.LOGS, consumer);
-		makeVanillaMaterialRecipes(ItemInit.STONE, Blocks.STONE_BRICKS.asItem(), consumer);
+		makeVanillaMaterialRecipes(ItemInit.WOOD, TagInit.PackedPlanksItem, consumer);
+		makeVanillaMaterialRecipes(ItemInit.STONE, BlockInit.PACKED_COBBLESTONE.get().asItem(), consumer);
 		makeVanillaMaterialRecipes(ItemInit.IRON, Blocks.IRON_BLOCK.asItem(), consumer);
 		makeVanillaMaterialRecipes(ItemInit.GOLD, Blocks.GOLD_BLOCK.asItem(), consumer);
 		makeVanillaMaterialRecipes(ItemInit.DIAMOND, Blocks.DIAMOND_BLOCK.asItem(), consumer);
 		makeNetheriteMaterialRecipes(consumer);
+		
+		makeBlockRecipes(BlockInit.PACKED_ACACIA.get(), Blocks.ACACIA_LOG.asItem(), consumer, "acacia");
+		makeBlockRecipes(BlockInit.PACKED_BIRCH.get(), Blocks.BIRCH_LOG.asItem(), consumer, "birch");
+		makeBlockRecipes(BlockInit.PACKED_CRIMSON.get(), Blocks.CRIMSON_STEM.asItem(), consumer, "crimson");
+		makeBlockRecipes(BlockInit.PACKED_DARK_OAK.get(), Blocks.DARK_OAK_LOG.asItem(), consumer, "dark_oak");
+		makeBlockRecipes(BlockInit.PACKED_JUNGLE.get(), Blocks.JUNGLE_LOG.asItem(), consumer, "jungle");
+		makeBlockRecipes(BlockInit.PACKED_OAK.get(), Blocks.OAK_LOG.asItem(), consumer, "oak");
+		makeBlockRecipes(BlockInit.PACKED_SPRUCE.get(), Blocks.SPRUCE_LOG.asItem(), consumer, "spruce");
+		makeBlockRecipes(BlockInit.PACKED_WARPED.get(), Blocks.WARPED_STEM.asItem(), consumer, "warped");
+		
+		makeBlockRecipes(BlockInit.PACKED_COBBLESTONE.get(), Blocks.COBBLESTONE.asItem(), consumer, "cobblestone");
 	}
 
 	private void makeVanillaMaterialRecipes(VanillaMaterial material, Item item, Consumer<IFinishedRecipe> consumer)
@@ -78,6 +92,12 @@ public class ModRecipes extends RecipeProvider
 		makeSmithingRecipe(diamond.backhoe.get(), Blocks.NETHERITE_BLOCK.asItem(), netherite.backhoe.get(), consumer);
 		makeSmithingRecipe(diamond.tiller.get(), Blocks.NETHERITE_BLOCK.asItem(), netherite.tiller.get(), consumer);
 		makeSmithingRecipe(diamond.backhaw.get(), Blocks.NETHERITE_BLOCK.asItem(), netherite.backhaw.get(), consumer);
+	}
+	
+	private void makeBlockRecipes(Block block, Item mat, Consumer<IFinishedRecipe> consumer, String material)
+	{
+	    ShapedRecipeBuilder.shapedRecipe(block).key('#', mat).patternLine("###").patternLine("###").patternLine("###").addCriterion("has_" + material, hasItem(mat)).build(consumer);
+	    ShapelessRecipeBuilder.shapelessRecipe(mat, 9).addIngredient(block).setGroup(material + "_ingot").addCriterion("has_packed_" + material, hasItem(block)).build(consumer, rl(material + "_from_packed_" + material));
 	}
 
 	private void makeSmithingRecipe(Item base, Item addition, Item output, Consumer<IFinishedRecipe> consumer)

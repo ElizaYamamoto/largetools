@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "birch_ingot",
+  "ingredients": [
+    {
+      "item": "largetools:packed_birch"
+    }
+  ],
+  "result": {
+    "item": "minecraft:birch_log",
+    "count": 9
+  }
+}

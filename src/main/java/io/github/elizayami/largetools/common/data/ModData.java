@@ -17,14 +17,22 @@ public class ModData
 		DataGenerator dataGenerator = event.getGenerator();
 		
 		ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
-		
+
 		if (event.includeClient())
 		{
 			dataGenerator.addProvider(new ModItemModels(dataGenerator, existingFileHelper));
+			
+			dataGenerator.addProvider(new ModBlockStates(dataGenerator, existingFileHelper));
 		}
 		if (event.includeServer())
 		{
+			ModBlockTagsProvider blockTags = new ModBlockTagsProvider(dataGenerator, existingFileHelper);
+			dataGenerator.addProvider(blockTags);
+			dataGenerator.addProvider(new ModItemTagsProvider(dataGenerator, blockTags, existingFileHelper));
+			
 			dataGenerator.addProvider(new ModRecipes(dataGenerator));
+			
+			dataGenerator.addProvider(new ModLootTableProvider(dataGenerator));
 		}
 	}
 }

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "dark_oak_ingot",
+  "ingredients": [
+    {
+      "item": "largetools:packed_dark_oak"
+    }
+  ],
+  "result": {
+    "item": "minecraft:dark_oak_log",
+    "count": 9
+  }
+}

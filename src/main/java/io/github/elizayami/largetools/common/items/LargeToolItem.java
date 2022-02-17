@@ -78,26 +78,36 @@ public class LargeToolItem extends ToolItem
 	}
 
 	@Nullable
-	private static ToolType getAction(World level, BlockPos pos, PlayerEntity player, ItemStack stack, BlockState state, Direction face) {
+	private static ToolType getAction(World level, BlockPos pos, PlayerEntity player, ItemStack stack, BlockState state,
+			Direction face)
+	{
 		Set<ToolType> toolTypes = stack.getToolTypes();
-		if(toolTypes.contains(ToolType.AXE) && state.getToolModifiedState(level, pos, player, stack, ToolType.AXE) != null)
+		if (toolTypes.contains(ToolType.AXE)
+				&& state.getToolModifiedState(level, pos, player, stack, ToolType.AXE) != null)
 			return ToolType.AXE;
-		if(face != Direction.DOWN) {
-			if (player.isSecondaryUseActive()) {
-				if (toolTypes.contains(ToolType.HOE) && state.getToolModifiedState(level, pos, player, stack, ToolType.HOE) != null)
+		if (face != Direction.DOWN)
+		{
+			if (player.isSecondaryUseActive())
+			{
+				if (toolTypes.contains(ToolType.HOE)
+						&& state.getToolModifiedState(level, pos, player, stack, ToolType.HOE) != null)
 					return ToolType.HOE;
-				if (toolTypes.contains(ToolType.SHOVEL) && state.getToolModifiedState(level, pos, player, stack, ToolType.SHOVEL) != null)
+				if (toolTypes.contains(ToolType.SHOVEL)
+						&& state.getToolModifiedState(level, pos, player, stack, ToolType.SHOVEL) != null)
 					return ToolType.SHOVEL;
-			} else {
-				if (toolTypes.contains(ToolType.SHOVEL) && state.getToolModifiedState(level, pos, player, stack, ToolType.SHOVEL) != null)
+			}
+			else
+			{
+				if (toolTypes.contains(ToolType.SHOVEL)
+						&& state.getToolModifiedState(level, pos, player, stack, ToolType.SHOVEL) != null)
 					return ToolType.SHOVEL;
-				if (toolTypes.contains(ToolType.HOE) && state.getToolModifiedState(level, pos, player, stack, ToolType.HOE) != null)
+				if (toolTypes.contains(ToolType.HOE)
+						&& state.getToolModifiedState(level, pos, player, stack, ToolType.HOE) != null)
 					return ToolType.HOE;
 			}
 		}
 		return null;
 	}
-
 
 	@Override
 	public ActionResultType onItemUse(ItemUseContext context)
@@ -111,7 +121,8 @@ public class LargeToolItem extends ToolItem
 
 		ToolType action = getAction(world, pos, player, stack, state, face);
 
-		if(action != null) {
+		if (action != null)
+		{
 			if (action == ToolType.AXE)
 				world.playSound(player, pos, SoundEvents.ITEM_AXE_STRIP, SoundCategory.BLOCKS, 1.0F, 1.0F);
 			else if (action == ToolType.HOE)
@@ -119,19 +130,23 @@ public class LargeToolItem extends ToolItem
 			else if (action == ToolType.SHOVEL)
 				world.playSound(player, pos, SoundEvents.ITEM_SHOVEL_FLATTEN, SoundCategory.BLOCKS, 1.0F, 1.0F);
 
-			if (!world.isRemote) {
+			if (!world.isRemote)
+			{
 				rightClick(stack, world, pos, player, face, action);
 				if (player != null)
 					stack.damageItem(1, player, entity -> entity.sendBreakAnimation(context.getHand()));
 			}
 			return ActionResultType.func_233537_a_(world.isRemote);
 		}
-		else {
+		else
+		{
 			return ActionResultType.PASS;
 		}
 	}
 
-	public void rightClick(ItemStack stack, World world, BlockPos pos, PlayerEntity player, Direction face, ToolType action) {
+	public void rightClick(ItemStack stack, World world, BlockPos pos, PlayerEntity player, Direction face,
+			ToolType action)
+	{
 		int x = pos.getX();
 		int y = pos.getY();
 		int z = pos.getZ();
@@ -139,16 +154,24 @@ public class LargeToolItem extends ToolItem
 		int radius = 1 + EnchantmentHelper.getEnchantmentLevel(EnchantmentInit.EXPAND.get(), stack);
 
 		Iterable<BlockPos> area;
-		if (face.getAxis() == Direction.Axis.Y || action == ToolType.HOE || action == ToolType.SHOVEL) {
+		if (face.getAxis() == Direction.Axis.Y || action == ToolType.HOE || action == ToolType.SHOVEL)
+		{
 			area = BlockPos.getAllInBoxMutable(x - radius, y, z - radius, x + radius, y, z + radius);
-		} else if (face.getAxis() == Direction.Axis.Z) {
+		}
+		else if (face.getAxis() == Direction.Axis.Z)
+		{
 			area = BlockPos.getAllInBoxMutable(x - radius, y - radius, z, x + radius, y + radius, z);
-		} else if (face.getAxis() == Direction.Axis.X) {
+		}
+		else if (face.getAxis() == Direction.Axis.X)
+		{
 			area = BlockPos.getAllInBoxMutable(x, y - radius, z - radius, x, y + radius, z + radius);
-		} else {
+		}
+		else
+		{
 			area = Collections.singleton(pos); // probably unreachable but here's a fallback
 		}
-		for (BlockPos pos2 : area) {
+		for (BlockPos pos2 : area)
+		{
 			BlockState state = world.getBlockState(pos2);
 			BlockState modifiedState = state.getToolModifiedState(world, pos2, player, stack, action);
 			if (modifiedState != null)

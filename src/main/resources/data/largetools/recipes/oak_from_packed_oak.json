@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "oak_ingot",
+  "ingredients": [
+    {
+      "item": "largetools:packed_oak"
+    }
+  ],
+  "result": {
+    "item": "minecraft:oak_log",
+    "count": 9
+  }
+}

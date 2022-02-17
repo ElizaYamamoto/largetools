@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "largetools:warped_from_packed_warped"
+    ]
+  },
+  "criteria": {
+    "has_packed_warped": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "largetools:packed_warped"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "largetools:warped_from_packed_warped"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_packed_warped",
+      "has_the_recipe"
+    ]
+  ]
+}

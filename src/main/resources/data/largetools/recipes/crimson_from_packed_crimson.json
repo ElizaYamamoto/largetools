@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "crimson_ingot",
+  "ingredients": [
+    {
+      "item": "largetools:packed_crimson"
+    }
+  ],
+  "result": {
+    "item": "minecraft:crimson_stem",
+    "count": 9
+  }
+}

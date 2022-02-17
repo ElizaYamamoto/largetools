@@ -41,5 +41,15 @@
 	"item.largetools.netherite_saw": "Netherite Saw",
 	"item.largetools.netherite_backhoe": "Netherite Backhoe",
 	"item.largetools.netherite_tiller": "Netherite Tiller",
-	"item.largetools.netherite_backhaw": "Netherite Backhaw"
+	"item.largetools.netherite_backhaw": "Netherite Backhaw",
+	
+	"block.largetools.packed_acacia": "Packed Acacia Wood",
+	"block.largetools.packed_birch": "Packed Birch Wood",
+	"block.largetools.packed_crimson": "Packed Crimson Wood",
+	"block.largetools.packed_dark_oak": "Packed Dark Oak Wood",
+	"block.largetools.packed_jungle": "Packed Jungle Wood",
+	"block.largetools.packed_oak": "Packed Oak Wood",
+	"block.largetools.packed_spruce": "Packed Spruce Wood",
+	"block.largetools.packed_warped": "Packed Warped Wood",
+	"block.largetools.packed_cobblestone": "Packed Cobblestone"
 }

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "largetools:acacia_from_packed_acacia"
+    ]
+  },
+  "criteria": {
+    "has_packed_acacia": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "largetools:packed_acacia"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "largetools:acacia_from_packed_acacia"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_packed_acacia",
+      "has_the_recipe"
+    ]
+  ]
+}
