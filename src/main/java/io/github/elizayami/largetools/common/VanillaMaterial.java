@@ -2,6 +2,7 @@ package io.github.elizayami.largetools.common;
 
 import io.github.elizayami.largetools.LargeTools;
 import io.github.elizayami.largetools.common.items.BackhoeItem;
+import io.github.elizayami.largetools.common.items.BackhawItem;
 import io.github.elizayami.largetools.common.items.HammerItem;
 import io.github.elizayami.largetools.common.items.PaxelItem;
 import io.github.elizayami.largetools.common.items.SawItem;
@@ -41,7 +42,7 @@ public class VanillaMaterial
 		hammer = ItemInit.registerItem(name + "_hammer", () -> new HammerItem(material, 2f, -3.2F, p -> p.group(LargeTools.toolGroup)));
 		saw = ItemInit.registerItem(name + "_saw", () -> new SawItem(material, 6.5F, -3.5F, p -> p.group(LargeTools.toolGroup)));
 		tiller = ItemInit.registerItem(name + "_tiller", () -> new TillerItem(material, 1, -3F, p -> p.group(LargeTools.toolGroup)));
-		backhaw = ItemInit.registerItem(name + "_backhaw", () -> new PaxelItem(material, 4, -3F, p -> p.group(LargeTools.toolGroup)));
+		backhaw = ItemInit.registerItem(name + "_backhaw", () -> new BackhawItem(material, 4, -3F, p -> p.group(LargeTools.toolGroup)));
 	}
 	
 
