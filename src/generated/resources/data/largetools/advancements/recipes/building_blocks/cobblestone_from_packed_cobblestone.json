@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "largetools:cobblestone_from_packed_cobblestone"
+    ]
+  },
+  "criteria": {
+    "has_packed_cobblestone": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "largetools:packed_cobblestone"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "largetools:cobblestone_from_packed_cobblestone"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_packed_cobblestone",
+      "has_the_recipe"
+    ]
+  ]
+}

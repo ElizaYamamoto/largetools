@@ -6,8 +6,8 @@ license="Academic Free License v3.0"
 modId="largetools"
 version="1.0.0"
 displayName="LizYami's Large Tools"
-credits="Created by Elizabeth Yamamoto"
-displayURL="https://www.curseforge.com/minecraft/mc-mods/lizyamislargetools"
+credits="Created by Elizabeth Yamamoto with help from Random832"
+displayURL="https://www.curseforge.com/minecraft/mc-mods/lizyamis-large-tools"
 authors="ElizaYami"
 
 [[dependencies.largetools]]

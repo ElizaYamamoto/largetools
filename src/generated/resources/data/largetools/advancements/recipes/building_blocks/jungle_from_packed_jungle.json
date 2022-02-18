@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "largetools:jungle_from_packed_jungle"
+    ]
+  },
+  "criteria": {
+    "has_packed_jungle": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "largetools:packed_jungle"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "largetools:jungle_from_packed_jungle"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_packed_jungle",
+      "has_the_recipe"
+    ]
+  ]
+}

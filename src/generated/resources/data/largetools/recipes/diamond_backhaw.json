@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XYZ",
+    " # ",
+    " # "
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "X": {
+      "item": "largetools:diamond_saw"
+    },
+    "Y": {
+      "item": "largetools:diamond_hammer"
+    },
+    "Z": {
+      "item": "largetools:diamond_backhoe"
+    }
+  },
+  "result": {
+    "item": "largetools:diamond_backhaw"
+  }
+}

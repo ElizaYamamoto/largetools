@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XYZ",
+    " # ",
+    " # "
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "X": {
+      "item": "largetools:gold_saw"
+    },
+    "Y": {
+      "item": "largetools:gold_hammer"
+    },
+    "Z": {
+      "item": "largetools:gold_backhoe"
+    }
+  },
+  "result": {
+    "item": "largetools:gold_backhaw"
+  }
+}

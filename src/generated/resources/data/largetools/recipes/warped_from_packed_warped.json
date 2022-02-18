@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "warped_ingot",
+  "ingredients": [
+    {
+      "item": "largetools:packed_warped"
+    }
+  ],
+  "result": {
+    "item": "minecraft:warped_stem",
+    "count": 9
+  }
+}

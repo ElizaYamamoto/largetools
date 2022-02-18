@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "jungle_ingot",
+  "ingredients": [
+    {
+      "item": "largetools:packed_jungle"
+    }
+  ],
+  "result": {
+    "item": "minecraft:jungle_log",
+    "count": 9
+  }
+}

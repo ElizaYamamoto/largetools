@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "largetools:dark_oak_from_packed_dark_oak"
+    ]
+  },
+  "criteria": {
+    "has_packed_dark_oak": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "item": "largetools:packed_dark_oak"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "largetools:dark_oak_from_packed_dark_oak"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_packed_dark_oak",
+      "has_the_recipe"
+    ]
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XYZ",
+    " # ",
+    " # "
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:stick"
+    },
+    "X": {
+      "item": "largetools:iron_saw"
+    },
+    "Y": {
+      "item": "largetools:iron_hammer"
+    },
+    "Z": {
+      "item": "largetools:iron_backhoe"
+    }
+  },
+  "result": {
+    "item": "largetools:iron_backhaw"
+  }
+}

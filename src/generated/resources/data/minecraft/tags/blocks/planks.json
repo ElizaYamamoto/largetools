@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "largetools:packed_acacia",
+    "largetools:packed_birch",
+    "largetools:packed_crimson",
+    "largetools:packed_dark_oak",
+    "largetools:packed_jungle",
+    "largetools:packed_oak",
+    "largetools:packed_spruce",
+    "largetools:packed_warped"
+  ]
+}

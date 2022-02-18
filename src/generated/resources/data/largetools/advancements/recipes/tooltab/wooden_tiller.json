@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "largetools:wooden_tiller"
+    ]
+  },
+  "criteria": {
+    "has_wooden_ingot": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "largetools:packed_planks_item"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "largetools:wooden_tiller"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_wooden_ingot",
+      "has_the_recipe"
+    ]
+  ]
+}
